@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-LABEL maintainer="Michael Ford <michael.kb.ford@gmail.com>"
+LABEL maintainer="Mike <your-email@example.com>"
 LABEL version="1.0"
 LABEL description="Base container for pipeline: includes bcftools, tabix, and Python (with pysam)"
 
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
     tabix \
     python3 \
     python3-pip && \
-    python-is-python3 && \
+    ln -s /usr/bin/python3 /usr/bin/python && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install pysam
