@@ -1,0 +1,27 @@
+# Nextflow working directory (generated files)
+work/
+
+# Nextflow cache and log directories
+.nextflow/
+.nextflow.log*
+nextflow.log
+
+# Singularity image files (if built locally)
+*.sif
+
+# Docker artifacts (if any)
+Dockerfile*
+.dockerignore
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Local configuration or environment-specific files
+*.local.config
+.env
